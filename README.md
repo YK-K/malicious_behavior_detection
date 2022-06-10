@@ -51,7 +51,7 @@ Train-Test Set 분리 단계에서는 scikit-learn의 train_test_split 모듈을
 #### 학습용 데이터셋 생성
 위 데이터셋 전처리 과정에서 제시한 방법을 조합하여, UNSW-NB15 Train set 및 Test set에서 서로 다른 전처리 과정을 거친 6개의 서브데이터셋을 생성하였습니다. 이는 아래 표에 자세히 표시하였습니다.
 |Dataset|Cleaning|Scaling|Train-Test set 분리|
-|---|---|---|---|---|
+|---|---|---|---|
 |X1|숫자 Column만 사용|-|Original Train-Test set 사용|
 |X2|숫자 Column만 사용|Min-Max Scaling|Original Train-Test set 사용|
 |X3|LabelEncoder 사용|-|Original Train-Test set 사용|
@@ -67,7 +67,7 @@ Anomaly-based IDS는 그 목적상 탐지하지 못하는 비정상 로그가 �
 
 ### 모델 훈련 결과
 |머신러닝 기법|데이터셋|Precision|Recall|F1-Score|
-|---|---|---|---|---|---|
+|---|---|---|---|---|
 |One-Class SVM|X1|0.373802229|0.517675676|0.43412926|
 |One-Class SVM|X2|0.803648584|0.361945946|0.499105546|
 |One-Class SVM|X3|0.373469507|0.516891892|0.433629222|
@@ -92,6 +92,7 @@ Anomaly-based IDS는 그 목적상 탐지하지 못하는 비정상 로그가 �
 |Local Outlier Factor|X4|0.658437159|0.309945946|0.421485933|
 |Local Outlier Factor|X5|0.519164661|0.16327027|0.248416811|
 |Local Outlier Factor|X6|0.522183133|0.919311828|0.666043439|
+
 ![image](./images/OCSVM_Result.png)
 ![image](./images/IF_Result.png)
 ![image](./images/EE_Result.png)
